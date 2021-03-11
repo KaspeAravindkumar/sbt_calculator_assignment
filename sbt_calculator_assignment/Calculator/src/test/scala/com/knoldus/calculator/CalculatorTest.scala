@@ -1,8 +1,8 @@
-package com.knoldus
+package com.knoldus.calculator
 
 import org.scalatest.flatspec.AnyFlatSpec
 
-class CalculatorSpec extends AnyFlatSpec {
+class CalculatorTest extends AnyFlatSpec {
   val calculator = new Calculator
 
   //Addition Test Cases:
@@ -194,4 +194,5 @@ class CalculatorSpec extends AnyFlatSpec {
     val res = calculator.absolute( number = 9)
     assert(res == 9)
   }
+
 }

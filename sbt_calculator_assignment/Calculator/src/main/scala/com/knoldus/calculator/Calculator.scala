@@ -1,4 +1,4 @@
-package com.knoldus
+package com.knoldus.calculator
 
 class Calculator {
   //Addition function
