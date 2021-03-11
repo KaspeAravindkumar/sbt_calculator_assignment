@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="knoldus-Vostro-15-3568" name="com.knoldus.calculator.CalculatorTest" tests="29" errors="0" failures="0" skipped="0" time="0.049" timestamp="2021-03-12T00:02:46">
+                     <properties>
+      <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value=""/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://ubuntu.com/"/><property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/><property name="sun.java.command" value="/usr/share/sbt/bin/sbt-launch.jar clean coverage test coverageReport"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2021-01-19"/><property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/><property name="user.name" value="knoldus"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/home/knoldus/.cache/JNA/temp/jna15529751472886649509.tmp"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="11.0.10"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/><property name="java.vendor" value="Ubuntu"/><property name="scala.ext.dirs" value="/home/knoldus/.sbt/0.13/java9-rt-ext-ubuntu_11_0_10"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="gnome"/><property name="java.class.path" value="/usr/share/sbt/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Ubuntu"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Asia/Kolkata"/><property name="os.name" value="Linux"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="IN"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/knoldus"/><property name="user.language" value="en"/><property name="swoval.tmpdir" value="/home/knoldus/.sbt/1.0"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="5.8.0-44-generic"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib"/><property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/><property name="user.dir" value="/home/knoldus/IdeaProjects/Calculator"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/><property name="java.class.version" value="55.0"/>
+    </properties>
+                     <testcase classname="com.knoldus.calculator.CalculatorTest" name="If we add two positive number should also give positive value" time="0.038">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we add two negative numbers should give negative value" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we add one positive and one negative number should add those numbers" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we add any number with zero should give the number itself" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we add equal values should give double of the number" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we subtract two numbers should give the subtracted value" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we subtract any number with zero should give the number itself" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we subtract zero with any number should give negative number of that number" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we subtract two negative numbers should give subtracted value of the numbers" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we subtract one positive number and one negative number should give added value" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we multiply two numbers should give multiplied value" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="If we multiply a number a number with zero should give zero" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="multiply one positive and one negative number should give negative value" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="number should not divide by zero" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="division of two positive number should be positive value" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="zero divide with any number should be zero" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="number should not calculate modulus if denominator is zero" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="modulus should be calculated if denominator is not zero" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="first number should be returned if it is greater" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="second number should be returned if it is greater" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="for equal numbers should return both are equal" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="first number should be returned if it is smaller" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="second number should be returned if it is smaller" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="for equal numbers should return equal" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="power should be calculated for two numbers" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="any number power zero should one" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="any number power one should be same number" time="0.0">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="negative number should give positive number" time="0.001">
+                                                 
+                                               </testcase><testcase classname="com.knoldus.calculator.CalculatorTest" name="positive number should give positive number" time="0.0">
+                                                 
+                                               </testcase>
+                     <system-out><![CDATA[]]></system-out>
+                     <system-err><![CDATA[]]></system-err>
+                   </testsuite>

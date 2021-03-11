@@ -1,0 +1,758 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/knoldus/calculator/Calculator.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package com.knoldus.calculator
+</span>2 <span style=''>
+</span>3 <span style=''>class Calculator {
+</span>4 <span style=''>  //Addition function
+</span>5 <span style=''>  def addition(first_number: Int, second_number: Int): Long = </span><span style='background: #AEF1AE'>first_number + second_number</span><span style=''>
+</span>6 <span style=''>
+</span>7 <span style=''>  //Subtraction function
+</span>8 <span style=''>  def subtraction(first_number: Int, second_number: Int): Long = </span><span style='background: #AEF1AE'>first_number - second_number</span><span style=''>
+</span>9 <span style=''>
+</span>10 <span style=''>  //Multiplication function
+</span>11 <span style=''>  def multiplication(first_number: Int, second_number: Int): Long = </span><span style='background: #AEF1AE'>first_number * second_number</span><span style=''>
+</span>12 <span style=''>
+</span>13 <span style=''>  //Division function
+</span>14 <span style=''>  def division(first_number: Int, second_number: Int): Any = {
+</span>15 <span style=''>    if (</span><span style='background: #AEF1AE'>second_number == 0</span><span style=''>) {
+</span>16 <span style=''>      </span><span style='background: #AEF1AE'>&quot;denominator cannot be zero&quot;</span><span style=''>
+</span>17 <span style=''>    } else {
+</span>18 <span style=''>      </span><span style='background: #AEF1AE'>first_number/second_number</span><span style=''>
+</span>19 <span style=''>    }
+</span>20 <span style=''>  }
+</span>21 <span style=''>
+</span>22 <span style=''>  //function to find power of a number
+</span>23 <span style=''>  def power(number: Int, power: Int): Double = </span><span style='background: #AEF1AE'>scala.math.pow(number, power)</span><span style=''>
+</span>24 <span style=''>
+</span>25 <span style=''>  //function to get absolute value of a number
+</span>26 <span style=''>  def absolute(number: Int): Int = </span><span style='background: #AEF1AE'>Math.abs(number)</span><span style=''>
+</span>27 <span style=''>
+</span>28 <span style=''>  //function to get remainder
+</span>29 <span style=''>  def modulus(first_number: Int, second_number: Int):Any = {
+</span>30 <span style=''>    if (</span><span style='background: #AEF1AE'>second_number == 0</span><span style=''>) {
+</span>31 <span style=''>      </span><span style='background: #AEF1AE'>&quot;denominator cannot be zero&quot;</span><span style=''>
+</span>32 <span style=''>    } else {
+</span>33 <span style=''>      </span><span style='background: #AEF1AE'>first_number % second_number</span><span style=''>
+</span>34 <span style=''>    }
+</span>35 <span style=''>  }
+</span>36 <span style=''>
+</span>37 <span style=''>  //function to check maximum of 2 numbers
+</span>38 <span style=''>  def maximumOfTwo(first_number: Int, second_number: Int):Any = {
+</span>39 <span style=''>    if (</span><span style='background: #AEF1AE'>first_number &gt; second_number</span><span style=''>) {
+</span>40 <span style=''>      </span><span style='background: #AEF1AE'>first_number</span><span style=''>
+</span>41 <span style=''>    } else </span><span style='background: #AEF1AE'>if (second_number &gt; first_number) {
+</span>42 <span style=''></span><span style='background: #AEF1AE'>      second_number
+</span>43 <span style=''></span><span style='background: #AEF1AE'>    } else {
+</span>44 <span style=''></span><span style='background: #AEF1AE'>      &quot;Both numbers are equal&quot;
+</span>45 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>46 <span style=''>  }
+</span>47 <span style=''>
+</span>48 <span style=''>  //function to check minimum of 2 numbers
+</span>49 <span style=''>  def minimumOfTwo(first_number: Int, second_number: Int):Any = {
+</span>50 <span style=''>    if (</span><span style='background: #AEF1AE'>first_number &lt; second_number</span><span style=''>) {
+</span>51 <span style=''>      </span><span style='background: #AEF1AE'>first_number</span><span style=''>
+</span>52 <span style=''>    } else </span><span style='background: #AEF1AE'>if (second_number &lt; first_number) {
+</span>53 <span style=''></span><span style='background: #AEF1AE'>      second_number
+</span>54 <span style=''></span><span style='background: #AEF1AE'>    }
+</span>55 <span style=''></span><span style='background: #AEF1AE'>    else {
+</span>56 <span style=''></span><span style='background: #AEF1AE'>      &quot;Both numbers are equal&quot;
+</span>57 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>58 <span style=''>  }
+</span>59 <span style=''>
+</span>60 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          5
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          135
+          -
+          163
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toLong
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.+(second_number).toLong
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          255
+          -
+          283
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toLong
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.-(second_number).toLong
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          381
+          -
+          409
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toLong
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.*(second_number).toLong
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          504
+          -
+          522
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          second_number.==(0)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          532
+          -
+          560
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;denominator cannot be zero&quot;
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          532
+          -
+          560
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;denominator cannot be zero&quot;
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          580
+          -
+          606
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Int./
+        </td>
+        <td style="background: #AEF1AE">
+          first_number./(second_number)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          580
+          -
+          606
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int./
+        </td>
+        <td style="background: #AEF1AE">
+          first_number./(second_number)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          704
+          -
+          733
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.pow
+        </td>
+        <td style="background: #AEF1AE">
+          scala.math.`package`.pow(number.toDouble, power.toDouble)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          727
+          -
+          732
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toDouble
+        </td>
+        <td style="background: #AEF1AE">
+          power.toDouble
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          719
+          -
+          725
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toDouble
+        </td>
+        <td style="background: #AEF1AE">
+          number.toDouble
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          817
+          -
+          833
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Math.abs
+        </td>
+        <td style="background: #AEF1AE">
+          java.lang.Math.abs(number)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          934
+          -
+          952
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          second_number.==(0)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          962
+          -
+          990
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;denominator cannot be zero&quot;
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          962
+          -
+          990
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;denominator cannot be zero&quot;
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          1010
+          -
+          1038
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Int.%
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.%(second_number)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          1010
+          -
+          1038
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.%
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.%(second_number)
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          1167
+          -
+          1195
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.&gt;(second_number)
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1205
+          -
+          1217
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          com.knoldus.calculator.Calculator.first_number
+        </td>
+        <td style="background: #AEF1AE">
+          first_number
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          1233
+          -
+          1261
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          second_number.&gt;(first_number)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          1229
+          -
+          1334
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (second_number.&gt;(first_number))
+  second_number
+else
+  &quot;Both numbers are equal&quot;
+        </td>
+      </tr><tr>
+        <td>
+          42
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          1271
+          -
+          1284
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          com.knoldus.calculator.Calculator.second_number
+        </td>
+        <td style="background: #AEF1AE">
+          second_number
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          1304
+          -
+          1328
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Both numbers are equal&quot;
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          1304
+          -
+          1328
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Both numbers are equal&quot;
+        </td>
+      </tr><tr>
+        <td>
+          50
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          1457
+          -
+          1485
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          first_number.&lt;(second_number)
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          1495
+          -
+          1507
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          com.knoldus.calculator.Calculator.first_number
+        </td>
+        <td style="background: #AEF1AE">
+          first_number
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          1519
+          -
+          1628
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (second_number.&lt;(first_number))
+  second_number
+else
+  &quot;Both numbers are equal&quot;
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          1523
+          -
+          1551
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          second_number.&lt;(first_number)
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          1561
+          -
+          1574
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          com.knoldus.calculator.Calculator.second_number
+        </td>
+        <td style="background: #AEF1AE">
+          second_number
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          1598
+          -
+          1622
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Both numbers are equal&quot;
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          1598
+          -
+          1622
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Both numbers are equal&quot;
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

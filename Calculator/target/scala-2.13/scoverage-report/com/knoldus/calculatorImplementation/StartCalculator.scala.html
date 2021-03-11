@@ -1,0 +1,737 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/knoldus/calculatorImplementation/StartCalculator.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package com.knoldus.calculatorImplementation
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.io.StdIn.readInt
+</span>4 <span style=''>
+</span>5 <span style=''>object StartCalculator extends App {
+</span>6 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;***************Calculator****************\n&quot;)</span><span style=''>
+</span>7 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;Select the operation to perform :\n&quot;)</span><span style=''>
+</span>8 <span style=''> lazy val calculate = new CalculatorImplementation
+</span>9 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;1. Add\n&quot;)</span><span style=''>
+</span>10 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;2. Subtract\n&quot;)</span><span style=''>
+</span>11 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;3. Multiplication\n&quot;)</span><span style=''>
+</span>12 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;4. Division\n&quot;)</span><span style=''>
+</span>13 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;5. Power\n&quot;)</span><span style=''>
+</span>14 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;6. Absolute\n&quot;)</span><span style=''>
+</span>15 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;7. Modulus\n&quot;)</span><span style=''>
+</span>16 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;8. Maximum of Two\n&quot;)</span><span style=''>
+</span>17 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;9. Minimum of Two\n&quot;)</span><span style=''>
+</span>18 <span style=''>  </span><span style='background: #F0ADAD'>print(&quot;Select operation 1-9 : &quot;)</span><span style=''>
+</span>19 <span style=''>  val operation = </span><span style='background: #F0ADAD'>readInt()</span><span style=''>
+</span>20 <span style=''>  if(</span><span style='background: #F0ADAD'>operation&gt;=1 &amp;&amp; operation&lt;=9</span><span style=''>)
+</span>21 <span style=''>  {
+</span>22 <span style=''>    </span><span style='background: #F0ADAD'>if(operation==6)
+</span>23 <span style=''></span><span style='background: #F0ADAD'>    {
+</span>24 <span style=''></span><span style='background: #F0ADAD'>      print(&quot;Enter the number: &quot;)
+</span>25 <span style=''></span><span style='background: #F0ADAD'>
+</span>26 <span style=''></span><span style='background: #F0ADAD'>      val number = io.StdIn.readInt()
+</span>27 <span style=''></span><span style='background: #F0ADAD'>
+</span>28 <span style=''></span><span style='background: #F0ADAD'>      print(s&quot;Result = ${calculate.selectOperations(operation,number,0)}&quot;)
+</span>29 <span style=''></span><span style='background: #F0ADAD'>    }
+</span>30 <span style=''></span><span style='background: #F0ADAD'>    else
+</span>31 <span style=''></span><span style='background: #F0ADAD'>      {
+</span>32 <span style=''></span><span style='background: #F0ADAD'>        //to read the input values
+</span>33 <span style=''></span><span style='background: #F0ADAD'>        print(&quot;Enter first number : &quot;)
+</span>34 <span style=''></span><span style='background: #F0ADAD'>        val first_number :Int = readInt()
+</span>35 <span style=''></span><span style='background: #F0ADAD'>        print(&quot;Enter second number : &quot;)
+</span>36 <span style=''></span><span style='background: #F0ADAD'>        val second_number:Int = readInt()
+</span>37 <span style=''></span><span style='background: #F0ADAD'>        print(s&quot;Result = ${calculate.selectOperations(operation,first_number,second_number)}&quot;)
+</span>38 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style=''>
+</span>39 <span style=''>  }
+</span>40 <span style=''>  else {
+</span>41 <span style=''>    </span><span style='background: #F0ADAD'>print(&quot;Enter a valid number in the range of 1 to 9&quot;)</span><span style=''>
+</span>42 <span style=''>  }
+</span>43 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          6
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          116
+          -
+          168
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;***************Calculator****************\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          171
+          -
+          215
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Select the operation to perform :\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          269
+          -
+          286
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;1. Add\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          289
+          -
+          311
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;2. Subtract\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          314
+          -
+          342
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;3. Multiplication\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          345
+          -
+          367
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;4. Division\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          370
+          -
+          389
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;5. Power\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          392
+          -
+          414
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;6. Absolute\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          417
+          -
+          438
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;7. Modulus\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          441
+          -
+          469
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;8. Maximum of Two\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          472
+          -
+          500
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;9. Minimum of Two\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          503
+          -
+          535
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Select operation 1-9 : &quot;)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          554
+          -
+          563
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          585
+          -
+          597
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;=
+        </td>
+        <td style="background: #F0ADAD">
+          StartCalculator.this.operation.&lt;=(9)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          580
+          -
+          581
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          569
+          -
+          597
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #F0ADAD">
+          StartCalculator.this.operation.&gt;=(1).&amp;&amp;(StartCalculator.this.operation.&lt;=(9))
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          610
+          -
+          622
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #F0ADAD">
+          StartCalculator.this.operation.==(6)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          607
+          -
+          1102
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          if (StartCalculator.this.operation.==(6))
+  {
+    scala.Predef.print(&quot;Enter the number: &quot;);
+    val number: Int = scala.io.StdIn.readInt();
+    scala.Predef.print((&quot;Result = &quot;.+(StartCalculator.this.calculate.selectOperations(StartCalculator.this.operation, number, 0)): String))
+  }
+else
+  {
+    scala.Predef.print(&quot;Enter first number : &quot;);
+    val first_number: Int = scala.io.StdIn.readInt();
+    scala.Predef.print(&quot;Enter second number : &quot;);
+    val second_number: Int = scala.io.StdIn.readInt();
+    scala.Predef.print((&quot;Result = &quot;.+(StartCalculator.this.calculate.selectOperations(StartCalculator.this.operation, first_number, second_number)): String))
+  }
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          628
+          -
+          784
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          {
+  scala.Predef.print(&quot;Enter the number: &quot;);
+  val number: Int = scala.io.StdIn.readInt();
+  scala.Predef.print((&quot;Result = &quot;.+(StartCalculator.this.calculate.selectOperations(StartCalculator.this.operation, number, 0)): String))
+}
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          636
+          -
+          663
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Enter the number: &quot;)
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          684
+          -
+          702
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          710
+          -
+          778
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print((&quot;Result = &quot;.+(StartCalculator.this.calculate.selectOperations(StartCalculator.this.operation, number, 0)): String))
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          800
+          -
+          1102
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          {
+  scala.Predef.print(&quot;Enter first number : &quot;);
+  val first_number: Int = scala.io.StdIn.readInt();
+  scala.Predef.print(&quot;Enter second number : &quot;);
+  val second_number: Int = scala.io.StdIn.readInt();
+  scala.Predef.print((&quot;Result = &quot;.+(StartCalculator.this.calculate.selectOperations(StartCalculator.this.operation, first_number, second_number)): String))
+}
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          845
+          -
+          875
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Enter first number : &quot;)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          908
+          -
+          917
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          926
+          -
+          957
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Enter second number : &quot;)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          990
+          -
+          999
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          1008
+          -
+          1094
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print((&quot;Result = &quot;.+(StartCalculator.this.calculate.selectOperations(StartCalculator.this.operation, first_number, second_number)): String))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          1120
+          -
+          1172
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Enter a valid number in the range of 1 to 9&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          1120
+          -
+          1172
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.print
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.print(&quot;Enter a valid number in the range of 1 to 9&quot;)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
